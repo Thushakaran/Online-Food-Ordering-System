@@ -26,8 +26,8 @@ public class FoodItem {
     private List<OrderItem> orderItems;
 
     @ManyToOne
-    @JoinColumn(name = "admin_id") // the column that joins to the Admin table
-    private Admin admin;
+    @JoinColumn(name = "user_id") // the column that joins to the Admin table
+    private User user;
 
     @ManyToOne
     @JoinColumn(name = "restaurant_id") // the column that links to the Restaurant table

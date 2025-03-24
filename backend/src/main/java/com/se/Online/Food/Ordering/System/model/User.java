@@ -23,7 +23,7 @@ public class User {
     private String password;
 
     @Column(nullable = false)
-    private String role;  // e.g. ADMIN, CUSTOMER
+    private Role role;  // e.g. ADMIN, CUSTOMER
 
     @OneToMany(mappedBy = "user")
     private List<Order> orders;

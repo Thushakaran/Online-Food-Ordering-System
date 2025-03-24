@@ -12,4 +12,6 @@ public class FoodItemDTO {
     private String name;
     private double price;
     private CategoryDTO category;
+    private Long restaurantId;
+    private Long userId;
 }

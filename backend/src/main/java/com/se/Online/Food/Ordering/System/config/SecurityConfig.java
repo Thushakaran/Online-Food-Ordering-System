@@ -32,17 +32,27 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
+    //    @Bean
+//    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+//        http.csrf(csrf -> csrf.disable())
+//                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+//                .authorizeHttpRequests(auth -> auth
+//                        .requestMatchers("/api/auth/login", "/api/auth/register").permitAll() // Ensure the correct path is here
+//                        .requestMatchers("/create", "/user/**").permitAll()
+//                        .anyRequest().authenticated()
+//                );
+//        return http.build();
+//    }
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/login", "/api/auth/register").permitAll() // Ensure the correct path is here
-                        .requestMatchers("/create", "/user/**").permitAll()
-                        .anyRequest().authenticated()
+                        .anyRequest().permitAll() // Allow all endpoints
                 );
         return http.build();
     }
+
 
 }
 

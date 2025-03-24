@@ -26,7 +26,7 @@ public class Restaurant {
     private List<Order> orders;
 
     @ManyToOne
-    @JoinColumn(name = "admin_id")
-    private Admin admin;  // Admin who owns this restaurant
+    @JoinColumn(name = "user_id")
+    private User user;  // Admin who owns this restaurant
 }
 
