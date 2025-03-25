@@ -11,6 +11,6 @@ public class FoodItemRequestDTO {
     private String name;
     private double price;
     private Long categoryId;
-    private Long restaurantId;
     private Long userId;
+    private Long restaurantId;
 }

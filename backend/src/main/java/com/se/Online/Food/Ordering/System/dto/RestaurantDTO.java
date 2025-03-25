@@ -12,4 +12,5 @@ public class RestaurantDTO {
     private String name;
     private String location;
     private String imageUrl;
+    private Long userId;
 }
