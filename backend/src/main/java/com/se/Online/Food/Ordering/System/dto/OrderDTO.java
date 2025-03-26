@@ -13,5 +13,7 @@ public class OrderDTO {
     private Long id;
     private String status;
     private double totalPrice;
-    private List<FoodItemDTO> foodItems;
+    private Long userId;
+    private Long restaurantId;
+    private List<Long> foodItemIds; // Only IDs to avoid unnecessary data loading
 }
